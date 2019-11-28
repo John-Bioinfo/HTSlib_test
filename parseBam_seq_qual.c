@@ -9,8 +9,8 @@ int main(int argc, char *argv[]){
 	bam1_t *aln = bam_init1(); //initialize an alignment
 	char *chrom = argv[2];
 	int locus = atoi(argv[3]);
-	int comp ;
 
+	printf("USAGE: ./main bamfile chr1 100000\n");
 	printf("%s\t%d\n", chrom, locus);
 	while(sam_read1(fp_in,bamHdr,aln) > 0){
 
